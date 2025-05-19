@@ -49,7 +49,7 @@ def handle_participant(pp_id= 1, participant = None, overwrite = False):
             return
     if participant is None:
         participant = read_xml.load_participant(pp_id, add_words = True)
-        _ = load_eeg.load_eeg(participant)
+        _ = load_eeg.load_word_epochs_participant(participant)
     output = []
     print('handling participant', pp_id)
     print(participant)
